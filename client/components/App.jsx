@@ -8,11 +8,16 @@ function App() {
 
   return (
     <>
-    <div>
-    <Header />
-    <Dropdown />
+    <div className='container-left'>
+      <img src='' alt='Eggs'></img>
     </div>
-
+      <div className='container-main'>
+      <Header />
+      <Dropdown />
+      </div>
+    <div className='container-right'>
+      <img src='' alt='Eggheads'></img>
+    </div>
     </>
   )
 }

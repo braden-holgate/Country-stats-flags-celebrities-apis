@@ -1,0 +1,16 @@
+body {
+  background-color: #fee4f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header, .subheader, .instructions {
+ text-align: center
+}

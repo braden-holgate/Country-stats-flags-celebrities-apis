@@ -25,7 +25,6 @@ const Dropdown = () => {
     console.log(countriesData)
   }
   
-  
   return (
     <>
     {/* Create Dropdown menu, linking data from API */}
@@ -41,17 +40,3 @@ const Dropdown = () => {
 
 export default Dropdown
 
-// npm install -D @babel/plugin-transform-runtime@7
-
-/*
-      "plugins": [
-      "@babel/plugin-proposal-class-properties",
-      "@babel/plugin-proposal-object-rest-spread",
-      [
-        "@babel/plugin-transform-runtime",
-        {
-          "regenerator": true
-        }
-      ]
-    ]
-*/

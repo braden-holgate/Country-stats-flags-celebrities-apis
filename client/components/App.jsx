@@ -1,21 +1,20 @@
-import React, { useState, useEffect } from 'react'
-import { getWelcome } from '../api/api'
+import React from 'react'
+import Dropdown from './Dropdown'
+import Header from './Header'
+
 
 function App() {
-  const [welcomeStatement, setWelcomeStatement] = useState('')
+ 
 
-  useEffect(() => {
-    getWelcome()
-      .then((res) => {
-        setWelcomeStatement(res.statement)
-        return null
-      })
-      .catch((err) => {
-        console.error(err.message)
-      })
-  })
+  return (
+    <>
+    <div>
+    <Header />
+    <Dropdown />
+    </div>
 
-  return <h1>{welcomeStatement}</h1>
+    </>
+  )
 }
 
 export default App

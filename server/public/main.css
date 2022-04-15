@@ -18,3 +18,7 @@ body {
 .css-2b097c-container {
   width: 30vw;
 }
+
+p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}

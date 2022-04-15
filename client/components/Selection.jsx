@@ -8,7 +8,7 @@ import { getCountries } from '../api/country'
 
 const Selection = () => {
   const [code, setCountryCode] = useState('')
-  const [countryData, setCountryData] = useState([])
+  const [countryData, setCountryData] = useState(null)
 // this is the api call function get one country
 
   const changeHandler = async (code) => {
@@ -18,7 +18,8 @@ const Selection = () => {
 
   const findCountry = async (code) => {
     const countryData = await getCountries(code)
-    setCountryData(countryData)
+    console.log(countryData[0])
+    setCountryData(countryData[0])
   }
 
   return (
@@ -30,8 +31,9 @@ const Selection = () => {
           onChange={(opt) => changeHandler(opt.value)}
         />
         {/* <Country /> */}
-        <Stats props={countryData} />
         <Flag props={code}/>
+        <Stats countryData={countryData} />
+        
       </div>
 
     </>

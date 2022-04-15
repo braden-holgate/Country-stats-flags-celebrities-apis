@@ -1,13 +1,13 @@
 import React from 'react'
 
 
-const Flag = ({code}) => {
-
+const Flag = (props) => {
+  // const code = 'NZ' 
   const rootUrl = 'https://countryflagsapi.com/png/'
-
+  console.log(props)
   return (
   <div>
-    <img src={rootUrl + code}></img>
+    {/* {code && <img src={rootUrl + code}></img>} */}
   </div>
   )
 }

@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 
-const Stats = () => {
+const Stats = (props) => {
   return (
-    <div>Stats</div>
+    <div>
+      <p>Capital City: </p>
+      <p>Currency: </p>
+    </div>
   )
 }
 

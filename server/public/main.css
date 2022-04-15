@@ -14,3 +14,7 @@ body {
 .header, .subheader, .instructions {
  text-align: center
 }
+
+.css-2b097c-container {
+  width: 30vw;
+}

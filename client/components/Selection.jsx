@@ -4,7 +4,7 @@ import  Flag  from './Flag'
 import Select from 'react-select'
 import countriesList from '../countries-list.json'
 import { getCountries } from '../api/country'
-
+import Celebrities from './Celebrities'
 
 const Selection = () => {
   const [code, setCountryCode] = useState('')
@@ -32,6 +32,7 @@ const Selection = () => {
         {/* <Country /> */}
         <Stats props={countryData} />
         <Flag props={code}/>
+        <Celebrities code={code} />
       </div>
 
     </>

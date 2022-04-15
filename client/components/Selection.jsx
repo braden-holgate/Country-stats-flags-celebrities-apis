@@ -19,7 +19,6 @@ const Selection = () => {
   const findCountry = async (code) => {
     const countryData = await getCountries(code)
     setCountryData(countryData)
-    console.log(countryData)
   }
 
   return (
@@ -35,10 +34,6 @@ const Selection = () => {
         <Flag props={code}/>
       </div>
 
-
-
-      {/* <Flag />
-      <Stats /> */}
     </>
   )}
 

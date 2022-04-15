@@ -1,8 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-const Flag = () => {
+
+const Flag = ({code}) => {
+
+  const rootUrl = 'https://countryflagsapi.com/png/'
+
   return (
-    <div>Flag</div>
+  <div>
+    <img src={rootUrl + code}></img>
+  </div>
   )
 }
 

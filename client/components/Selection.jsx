@@ -5,24 +5,37 @@ import Select from 'react-select'
 import countriesList from '../countries-list.json'
 import { getCountries } from '../api/country'
 
-const Selection = () => {
-  const [countryCode, setCountryCode] = useState('')
 
+const Selection = () => {
+  const [code, setCountryCode] = useState('')
+  const [countryData, setCountryData] = useState([])
 // this is the api call function get one country
-  const findCountry = async (code) => {
-    const countriesData = await getCountries(code)
-    console.log(countriesData)
+
+  const changeHandler = async (code) => {
+    setCountryCode(code)
+    findCountry(code)
   }
-  
+
+  const findCountry = async (code) => {
+    const countryData = await getCountries(code)
+    setCountryData(countryData)
+    console.log(countryData)
+  }
+
   return (
     <>
       <div className="App">
         <Select
           options={countriesList}
           // whatever code is entered, pass as parameter to api calls
-          onChange={(opt) => findCountry(opt.value)}
+          onChange={(opt) => changeHandler(opt.value)}
         />
+        {/* <Country /> */}
+        <Stats props={countryData} />
+        <Flag props={code}/>
       </div>
+
+
 
       {/* <Flag />
       <Stats /> */}

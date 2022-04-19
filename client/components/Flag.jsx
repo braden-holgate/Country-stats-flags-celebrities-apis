@@ -5,7 +5,7 @@ const Flag = (props) => {
   let code = props.props
   const rootUrl = 'https://countryflagsapi.com/png/'
   return (
-  <div>
+  <div className='flag'>
     {code && <img src={rootUrl + code}></img>}
   </div>
   )

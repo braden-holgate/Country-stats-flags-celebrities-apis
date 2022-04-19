@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 
 const Stats = (props) => {
 
-  console.log(props.countryData?.capital)
-
   return (
     
     <div className='stats'>

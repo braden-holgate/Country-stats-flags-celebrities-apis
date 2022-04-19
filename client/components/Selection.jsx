@@ -31,10 +31,14 @@ const Selection = () => {
           onChange={(opt) => changeHandler(opt.value)}
         />
         {/* <Country /> */}
+        <br></br>
+        <div className='row-container'>
         <Flag props={code}/>
+        <br></br>
         <Stats countryData={countryData} />
-        
+        <br></br>
         <Celebrities code={code} />
+        </div>
       </div>
 
     </>
